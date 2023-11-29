@@ -106,9 +106,8 @@ app.post('/login', async (req, res) => {
 
 //logOut 
 app.post('/logout', (req, res) => {
-
     req.session.destroy();
-    res.redirect('/login');
+    res.status(200).json({error:'ha salido del app'});
 });
 
 //Midleware de error general
